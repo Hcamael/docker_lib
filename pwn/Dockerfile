@@ -14,11 +14,10 @@ COPY pwn3 /home/pwn/pwn3/pwn3
 RUN cd /home/pwn && mkdir pwn4
 COPY pwn4 /home/pwn/pwn4/pwn4
 
-COPY start.sh /home/pwn/start.sh
-RUN chmod +x /home/pwn/start.sh
+COPY start.sh /usr/bin/start
+RUN chmod +x /usr/bin/start
 
 RUN groupadd -r pwn && useradd -r -g pwn pwn
 USER pwn
 EXPOSE 10001-10005
 
-CMD ["/home/pwn/start.sh"]
