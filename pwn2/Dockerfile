@@ -1,4 +1,4 @@
-FROM registry.cn-beijing.aliyuncs.com/hcamael/ubuntu:base
+FROM ubuntu:16.04
 
 RUN apt update && apt install -y socat lsb-core netcat
 RUN cd /home && mkdir pwn && cd pwn && mkdir pwn6
